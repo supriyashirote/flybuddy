@@ -1,0 +1,44 @@
+<div class="search-form container">
+    <form (submit)="searchFlights()">
+      <div class="form-group">
+        <label for="oneway">One way</label>
+        <input type="radio" id="oneway" [(ngModel)]="oneway" name="oneway" value="oneWay" checked> 
+      </div> 
+      <div class="row"> 
+        <div class="col-6">
+            <div class="form-group">
+                <label for="flyingFrom">Flying From</label>
+                <input type="text" class="form-control" id="flyingFrom" [(ngModel)]="flyingFrom" name="flyingFrom" required placeholder="City or airport">
+            </div>
+            </div>
+            <div class="col-6">
+            <div class="form-group">
+                <label for="flyingTo">Flying To</label>
+                <input type="text" class="form-control" id="flyingTo" [(ngModel)]="flyingTo" name="flyingTo" required placeholder="City or airport">
+            </div>
+            </div>
+        </div>
+      <div class="form-group">
+        <label for="date">Departing</label>
+          <input type="date" class="form-control" id="date" [(ngModel)]="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="adults">Adults (18+)</label>
+        <input type="number" class="form-control" id="adults" min="1" max="10" value="1" [(ngModel)]="adults" name="adults" required>
+      </div>
+      <div class="form-group">
+        <label for="children">Children (0-17)</label>
+          <input type="number" class="form-control" id="children" min="0" max="10" value="0" [(ngModel)]="children" name="children" required>
+      </div>
+      <div class="form-group">
+        <label for="class">Travel Class</label>
+        <select class="form-control" id="class" [(ngModel)]="class" name="class" required>
+          <option>Economy</option>
+          <option>Business</option>
+          <option>First Class</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+  

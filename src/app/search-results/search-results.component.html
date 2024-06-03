@@ -1,0 +1,20 @@
+<div class="container search-result">
+    <div *ngIf="matchingFlights.length > 0; else noFlights">
+      <div *ngFor="let flight of matchingFlights" class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ flight.name }}</h5>
+          <p class="card-text">{{ flight.oneway }}</p>
+          <p class="card-text">From: {{ flight.flyingFrom }} To: {{ flight.flyingTo }}</p>
+          <p class="card-text">Date: {{ flight.date }}</p>
+          <p class="card-text">adults: {{ flight.adults }}</p>
+          <p class="card-text">children: {{ flight.children }}</p>
+          <p class="card-text">Class: {{ flight.class }}</p>
+          <button (click)="bookFlight(flight)" class="btn btn-primary">Book</button>
+        </div>
+      </div>
+    </div>
+    <ng-template #noFlights>
+      <p>No flights available for the selected criteria.</p>
+    </ng-template>
+  </div>
+  

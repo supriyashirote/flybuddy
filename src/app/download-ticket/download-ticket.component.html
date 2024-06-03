@@ -1,0 +1,27 @@
+<div class="container download-ticket">
+  <div class="download-privacy">
+    <p>Passenger are recommended to check in two hours before the scheduled departure
+      time to prevent cancellation of passenger reservation. The airline shall not be liable
+      to loss or damages due to passenger's failure to comply with the provisions above if
+      without fault by the airline.</p>
+      <h2>Plane Ticket Purchase</h2>
+      <h3>Restricted items</h3>
+      <ol type="1">
+      <li>Pointed or sharp objects</li>
+      <li>Firearms and Ammunition</li>
+      <li>Exposives and flammable substances</li>
+      <li>Toys represents dangerous objects such as toy guns and knives</li>
+      <li>Aerosols</li>
+      <li>Any other items which may be considered security hazards by law</li>
+    </ol>
+    <b>THANK YOU FOR MAKING US YOUR AIRLINE OF CHOICE! HAVE A SAFE FLIGHT</b>
+      <p></p>
+  </div>
+    <div *ngIf="ticket">
+      <button (click)="downloadTicket()" class="btn btn-primary">Download</button>
+    </div>
+    <div *ngIf="!ticket">
+      <p>No ticket found. Please book a flight first.</p>
+    </div>
+  </div>
+  

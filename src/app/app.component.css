@@ -1,0 +1,20 @@
+.flight-details p:nth-of-type(odd), .city-details p:nth-of-type(odd){
+    background-color: rgba(0, 0, 0, 0.05);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 7px 0px;
+}
+.flightsite{
+  background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.flight-details, .city-details{
+  margin-top: 35px;
+}
+.flight-details{
+  padding: 10px 0px 10px 10px;
+}
+.city-details{
+ padding: 10px 10px 10px 0px;
+}

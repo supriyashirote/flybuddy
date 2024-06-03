@@ -1,0 +1,18 @@
+<div class="customer-form container">
+    <form (submit)="confirmBooking()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="customer.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="customer.email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" [(ngModel)]="customer.phone" name="phone" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Confirm Booking</button>
+    </form>
+  </div>
+  

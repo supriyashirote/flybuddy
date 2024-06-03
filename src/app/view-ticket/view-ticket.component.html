@@ -1,0 +1,21 @@
+<div class="container view-ticket">
+    <div *ngIf="ticket">
+      <p>{{ ticket.flight.name }}</p>
+      <p>From: {{ ticket.flight.flyingFrom }} To: {{ ticket.flight.flyingTo }}</p>
+      <p>Date: {{ ticket.flight.date }}</p>
+      <p>Adults: {{ ticket.flight.adults }}</p>
+      <p>Children: {{ ticket.flight.children }}</p>
+      <p>Class: {{ ticket.flight.class }}</p>
+  
+      <h3>Customer Details</h3>
+      <p>Name: {{ ticket.customer.name }}</p>
+      <p>Email: {{ ticket.customer.email }}</p>
+      <p>Phone: {{ ticket.customer.phone }}</p>
+  
+      <a routerLink="/download-ticket" class="btn btn-primary">Download Ticket</a>
+    </div>
+    <div *ngIf="!ticket">
+      <p>No ticket found. Please book a flight first.</p>
+    </div>
+  </div>
+  
